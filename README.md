@@ -1,4 +1,4 @@
-# MoodyProject
+# Moody
 
 **CURRENTLY ONLY WORKS IN CHROME**
 
