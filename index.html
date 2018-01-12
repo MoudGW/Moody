@@ -1,0 +1,163 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+  <!-- Plugin jQuery Easing JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+  <!-- Google map API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB17PLXf3yC5S-gh9hDuFBUKVqvFZajmX8&libraries=places"></script>
+
+  <!-- Link to external javaScript -->
+  <script src="assets/javascript/app.js" type="text/javascript"></script>
+
+  <!-- Link to colors CSS -->
+  <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">
+
+  <!-- Added link to the Bootstrap Library -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- Custom Fonts -->
+  <script src="https://use.fontawesome.com/7c7cf4a181.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Moody</title>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand page-scroll" href="#page-top">
+          <i class="fa fa-hashtag"></i> <span class="light">Moody</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Intro Header -->
+  <header class="intro">
+    <div class="intro-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h1 style="font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;" class="brand-heading">
+              <span style="color: #0074D9">M</span>
+              <span style="color:#01FF70">O</span>
+              <span style="color:#FF851B">O</span>
+              <span style="color:#FFDC00">D</span>
+              <span style="color:#7FDBFF">Y</span></h1>
+            <p class="intro-text">
+              Show me your mood and I'll try to match it
+            </p>
+            <a href="#upload" class="btn btn-circle page-scroll">
+              <i class="fa fa-angle-down animated"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Upload photo Section -->
+  <section id="upload" class="container content-section text-center">
+    <div class="container camera">
+
+  <div class="app">
+
+    <a href="#" id="start-camera" class="visible">Touch here to start the app.</a>
+    <video id="camera-stream"></video>
+    <img id="snap">
+
+    <p id="error-message"></p>
+
+    <div class="controls">
+      <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">delete</i></a>
+      <a href="#" id="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
+      <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled" ><i class="material-icons">file_download</i></a>  
+    </div>
+
+    <!-- Hidden canvas element. Used for taking snapshot of video. -->
+    <canvas></canvas>
+
+  </div>
+
+</div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+        <div class="form-group" style="margin-top: 35px;">
+          <h2>Upload a photo</h2>
+          <label for="pic"><i class="fa fa-cloud-upload fa-5x" aria-hidden="true" id="loadPicIcon"></i></label>
+          <input type="file" id="pic" style="display: none">
+          <p>Once you upload I can figure out your mood</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Google voice -->
+  <section id="voice" class="container results-section text-center">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h2>Lets talk about it</h2>
+        <div id="A" class="form-group">
+          <label for="comment">Say: "I want to eat something"</label><br>
+          <label for="comment">Say: "I want to watch a movie"</label><br>
+          <label for="comment">Say: "I want to get out of the house"</label><br> 
+          <label for="comment">Say: "Go" to open google search</label><br>                    
+          <label for="comment">Say: "Stop" to stop listening</label><br>
+          <br>
+          <textarea class="form-control" rows="1" id="comment"></textarea>
+          <br>
+          <div id="button">
+            <i id="mic" class="fa fa-microphone fa-lg" style="font-size: 8.333333em" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mapSection" class="container results-section text-center">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h2>Match the mood</h2>
+        <div id="map" class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>Hope you enjoyed</p>
+    </div>
+  </footer>
+
+</body>
+
+
+</html>
