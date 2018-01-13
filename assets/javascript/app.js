@@ -93,6 +93,7 @@ location.href='#page-top';
                     }
 
                     // Execute the voice function after 1 second and pass through the current mood
+                    console.log(mood);
                     setTimeout(googleVoice(mood), 100);
                     // Change the dynamic loading icon back to the static cloud icon
                     $("#loadPicIcon").attr("class", "fa fa-cloud-upload fa-5x");
@@ -108,7 +109,7 @@ location.href='#page-top';
         console.log('dsfdgdsfg');
         var speechMessage = new SpeechSynthesisUtterance();
         speechMessage.lang = 'en-US';
-        speechMessage.text = 'oh  you  look  ' + mood + ' Today  how  can I  help  you';
+        speechMessage.text = 'oh  you  look   ' + mood + ' Today  how  can I  help  you';
         speechSynthesis.speak(speechMessage);
 
         speechMessage.onstart = function (event) {
@@ -243,7 +244,7 @@ location.href='#page-top';
     // ====================================================================================================================================
 
     // This is so a map local to the user is loaded immediately when the site is initially visited
-    $.getJSON("https://ipapi.co/json/",
+    $.getJSON("http://ip-api.com/json",
         function (json) {
 
             var city = json.city;
@@ -263,7 +264,7 @@ location.href='#page-top';
             scrollTop: $("#mapSection").offset().top
         }, 1500, 'easeInOutExpo');
 
-        $.getJSON("https://ipapi.co/json/",
+        $.getJSON("http://ip-api.com/json",
             function (json) {
 
                 var city = json.city;
