@@ -10,3 +10,4 @@ the application captures your mood based on your uploaded image (Currently limit
 * google voice API
 * google face recognition API
 * google Maps API
+* google speech 
