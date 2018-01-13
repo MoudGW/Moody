@@ -163,6 +163,9 @@ body {
                     color: black;
                     background-color:#DDDDDD;
 }
+#voice{
+  background: url(../images/background.svg) rgb(10, 150, 50) no-repeat bottom center; 
+}
 
                 html {
                     width: 100%;
@@ -297,7 +300,6 @@ body {
                     height: auto;
                     padding: 100px 0;
                     text-align: center;
-                    background-color: #0074D9; 
                     background: url(../images/background.svg) rgb(10, 150, 50) no-repeat bottom center; 
                    -webkit-background-size: cover;
                     -moz-background-size: cover;

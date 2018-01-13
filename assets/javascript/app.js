@@ -1,10 +1,6 @@
 $(document).ready(function () {
 location.href='#page-top';
     speechSynthesis.speak(new SpeechSynthesisUtterance('hello upload your photo and check your mood today'));
-
-
-
-    // jQuery for page scrolling feature - requires jQuery Easing plugin
     $(function () {
         $('a.page-scroll').bind('click', function (event) {
             var $anchor = $(this);
@@ -14,9 +10,6 @@ location.href='#page-top';
             event.preventDefault();
         });
     });
-
-
-
     // ====================================================================================================================================
     // UPLOAD AND PASS A PHOTO TO THE GOOGLE VISION API    
     // ====================================================================================================================================
