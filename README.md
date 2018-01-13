@@ -1,4 +1,4 @@
-# MoodyProject
+# Moody Version Beta
 
 **CURRENTLY ONLY WORKS IN CHROME**
 
