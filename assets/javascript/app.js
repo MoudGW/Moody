@@ -1,10 +1,6 @@
 $(document).ready(function () {
-
-    // This will be used in a future release to greet the user by name when they log into the app. This approach would look at the username which would have been saved to the users local sessionStorage in the browser
-
-    // read a this greeting message for the user depense on his name
-    // var user = sessionStorage.getItem('user');
-    // speechSynthesis.speak(new SpeechSynthesisUtterance("Hi,  " + user + '. upload your photo and check your mood today'));
+location.href='#page-top';
+    speechSynthesis.speak(new SpeechSynthesisUtterance('hello upload your photo and check your mood today'));
 
 
 
