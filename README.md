@@ -2,12 +2,12 @@
 
 **CURRENTLY ONLY WORKS IN CHROME**
 
-What does it do?
+the application captures your mood based on your uploaded image (Currently limited to sad and happy) and responds via voice & acknowledges current mood, users can respond back via voice repeating one of the options presented the app will logs its suggestions based on user mood to a google map.
 
--Captures your mood based on your uploaded image (Currently limited to sad and happy)
+## Technologies
 
--Responds via voice & acknowledges current mood
 
--User responds back via voice repeating one of the options presented
-
--App logs its suggestions based on user mood to a google map
+* google voice API
+* google face recognition API
+* google Maps API
+* google speech 
