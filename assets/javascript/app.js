@@ -244,7 +244,7 @@ location.href='#page-top';
     // ====================================================================================================================================
 
     // This is so a map local to the user is loaded immediately when the site is initially visited
-    $.getJSON("http://ip-api.com/json",
+    $.getJSON("ip-api.com/json",
         function (json) {
 
             var city = json.city;
