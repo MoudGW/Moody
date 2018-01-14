@@ -244,7 +244,7 @@ location.href='#page-top';
     // ====================================================================================================================================
 
     // This is so a map local to the user is loaded immediately when the site is initially visited
-    $.getJSON("https://ip-api.com/json",
+    $.getJSON("https://ipapi.co/json/",
         function (json) {
 
             var city = json.city;
@@ -264,7 +264,7 @@ location.href='#page-top';
             scrollTop: $("#mapSection").offset().top
         }, 1500, 'easeInOutExpo');
 
-        $.getJSON("https://ip-api.com/json",
+        $.getJSON("https://ipapi.co/json/",
             function (json) {
 
                 var city = json.city;
