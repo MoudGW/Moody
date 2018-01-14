@@ -264,7 +264,7 @@ location.href='#page-top';
             scrollTop: $("#mapSection").offset().top
         }, 1500, 'easeInOutExpo');
 
-        $.getJSON("http://ip-api.com/json",
+        $.getJSON("ip-api.com/json",
             function (json) {
 
                 var city = json.city;
